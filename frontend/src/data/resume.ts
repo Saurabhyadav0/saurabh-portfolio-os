@@ -90,6 +90,19 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
+      id: "exam-signal-board",
+      title: "Exam Signal Board",
+      date: "2026",
+      status: "Live — exam-signal-board.vercel.app",
+      github: "https://github.com/Saurabhyadav0/exam-signal-board",
+      live: "https://exam-signal-board.vercel.app/",
+      featured: true,
+      tags: ["Full-Stack", "Platform"],
+      description: "A Next.js platform that ingests exam notifications and results from source sites, stores them in Postgres, and dispatches email alerts to registered users when new signals land.\n\nClerk handles authentication and account management, with a subscription-manage dashboard for users to control what they get notified about.",
+      chips: ["Clerk Auth", "Postgres", "Cheerio Ingestion", "Email Dispatch", "Live"],
+      stack: ["Next.js", "React", "TypeScript", "Clerk", "PostgreSQL", "Cheerio", "Nodemailer", "Vercel"]
+    },
+    {
       id: "soarx-platform",
       title: "SoarX Community Platform",
       date: "2025",
