@@ -123,7 +123,7 @@ export const RESUME_DATA: ResumeData = {
       github: "https://github.com/Saurabhyadav0/exam-signal-board",
       live: "https://exam-signal-board.vercel.app/",
       featured: true,
-      tags: ["Full-Stack", "Platform"],
+      tags: ["Backend", "Full-Stack"],
       description: "A Next.js platform that ingests exam notifications and results from source sites, stores them in Postgres, and dispatches email alerts to registered users when new signals land.\n\nClerk handles authentication and account management, with a subscription-manage dashboard for users to control what they get notified about.",
       chips: ["Clerk Auth", "Postgres", "Cheerio Ingestion", "Email Dispatch", "Live"],
       stack: ["Next.js", "React", "TypeScript", "Clerk", "PostgreSQL", "Cheerio", "Nodemailer", "Vercel"]
@@ -136,8 +136,8 @@ export const RESUME_DATA: ResumeData = {
       github: "https://github.com/saurabhyadav0",
       live: "https://soarx.live",
       featured: true,
-      tags: ["Full-Stack", "Platform"],
-      description: "A scalable ecosystem for tech workshops and instant certificate verification, built for the SoarX community.\n\nHandles authentication, workshop registration, and a QR-code based instant certificate verification flow at soarx.live/verifycertificate.",
+      tags: ["Production", "Frontend", "Full-Stack"],
+      description: "A scalable, in-production ecosystem for tech workshops and instant certificate verification, live for the SoarX community.\n\nHandles authentication, workshop registration, and a QR-code based instant certificate verification flow at soarx.live/verifycertificate — actively used by attendees to verify workshop certificates in real time.",
       chips: ["NextAuth", "Html5-qrcode", "Certificate Verification", "Live"],
       stack: ["Next.js", "NextAuth", "Html5-qrcode", "Tailwind CSS", "TypeScript"]
     },
@@ -148,7 +148,7 @@ export const RESUME_DATA: ResumeData = {
       status: "Shipped",
       github: "https://github.com/saurabhyadav0",
       featured: true,
-      tags: ["AI/ML", "Computer Vision"],
+      tags: ["Backend", "AI/ML"],
       description: "A computer vision application that identifies AI media manipulations using OpenCV face extraction and a custom PyTorch ResNet50 classification pipeline.\n\nWrapped in a Streamlit UI with a REST API for programmatic access.",
       chips: ["OpenCV Face Extraction", "Custom ResNet50", "Streamlit UI", "REST API"],
       stack: ["Python", "PyTorch", "ResNet50", "OpenCV", "Streamlit", "REST API"]
@@ -160,10 +160,10 @@ export const RESUME_DATA: ResumeData = {
       status: "Live",
       github: "https://github.com/saurabhyadav0",
       live: "https://github.com/saurabhyadav0",
-      featured: false,
-      tags: ["Full-Stack", "E-Commerce"],
-      description: "An interactive game booking platform engineered for real-time ticket scaling, secure transactions, and accelerated edge content delivery via Cloudflare.",
-      chips: ["Real-Time Ticketing", "Razorpay", "Cloudflare Edge"],
+      featured: true,
+      tags: ["Production", "Full-Stack"],
+      description: "A live, in-production interactive game booking platform engineered for real-time ticket scaling, secure transactions, and accelerated edge content delivery via Cloudflare.",
+      chips: ["Real-Time Ticketing", "Razorpay", "Cloudflare Edge", "Live"],
       stack: ["Next.js", "TypeScript", "Cloudflare", "Cloudinary", "Razorpay", "Vercel"]
     },
     {
@@ -186,10 +186,10 @@ export const RESUME_DATA: ResumeData = {
       status: "Live — repaly.ai",
       github: "https://github.com/saurabhyadav0",
       live: "https://www.repaly.ai/",
-      featured: false,
-      tags: ["Frontend", "AI"],
-      description: "An AI-driven engagement toolkit automation platform built for 1,000+ content creators — handling automated engagement workflows through a React and Redux-powered interface.",
-      chips: ["1,000+ Creators", "Redux", "shadcn/ui"],
+      featured: true,
+      tags: ["Production", "Frontend"],
+      description: "A live, in-production AI-driven engagement toolkit automation platform built for 1,000+ content creators — handling automated engagement workflows through a React and Redux-powered interface.",
+      chips: ["1,000+ Creators", "Redux", "shadcn/ui", "Live"],
       stack: ["React", "Redux", "Tailwind CSS", "shadcn/ui"]
     }
   ],
