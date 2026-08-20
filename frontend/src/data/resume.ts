@@ -191,15 +191,15 @@ export const RESUME_DATA: ResumeData = {
     {
       id: "activerse",
       title: "Activerse",
-      date: "2025",
-      status: "Live",
-      github: "https://github.com/saurabhyadav0",
-      live: "https://github.com/saurabhyadav0",
+      date: "2026",
+      status: "Live — activerse-nextjs.vercel.app",
+      github: "https://github.com/Saurabhyadav0/activerse-nextjs",
+      live: "https://activerse-nextjs.vercel.app/",
       featured: true,
       tags: ["Production", "Full-Stack"],
-      description: "A live, in-production interactive game booking platform engineered for real-time ticket scaling, secure transactions, and accelerated edge content delivery via Cloudflare.",
-      chips: ["Real-Time Ticketing", "Razorpay", "Cloudflare Edge", "Live"],
-      stack: ["Next.js", "TypeScript", "Cloudflare", "Cloudinary", "Razorpay", "Vercel"]
+      description: "A live, in-production booking system for Activerse, an arcade and entertainment venue — real-time slot availability (max 24 guests per slot), an admin dashboard for booking management, Razorpay payments, and automated confirmation emails.",
+      chips: ["Real-Time Booking", "Razorpay", "Admin Dashboard", "Live"],
+      stack: ["Next.js", "TypeScript", "MongoDB", "Mongoose", "Iron-session", "Razorpay", "Nodemailer", "Vercel"]
     },
     {
       id: "docs-realtime",

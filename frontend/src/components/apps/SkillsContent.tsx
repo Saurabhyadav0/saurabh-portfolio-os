@@ -10,13 +10,13 @@ interface ProficiencySkill {
 }
 
 const SKILL_PROFICIENCY: ProficiencySkill[] = [
-  { name: 'Node.js & Express.js', level: 92, tier: 'Expert', projects: 'Docs (Real-Time System), FarAlpha microservices' },
+  { name: 'Node.js & Express.js', level: 92, tier: 'Expert', projects: 'Docs (Real-Time Editor), FarAlpha microservices' },
   { name: 'TypeScript & JavaScript', level: 92, tier: 'Expert', projects: 'All 5 Production Projects' },
   { name: 'Next.js & React', level: 90, tier: 'Advanced', projects: 'SoarX Community Platform, Activerse, Replay.AI' },
   { name: 'PostgreSQL, MongoDB & Redis', level: 85, tier: 'Advanced', projects: 'FarAlpha caching, CockroachDB/NeonDB projects' },
   { name: 'Python, PyTorch & OpenCV', level: 82, tier: 'Advanced', projects: 'Deepfake Detection System (ResNet50)' },
-  { name: 'AWS & Docker', level: 80, tier: 'Advanced', projects: 'Docs (Real-Time System) — EC2, Nginx' },
-  { name: 'LLM Integration & AI Agents', level: 80, tier: 'Advanced', projects: 'Docs (Real-Time System), DatenStrom-3AG chatbots' },
+  { name: 'AWS & Docker', level: 80, tier: 'Advanced', projects: 'Docs (Real-Time Editor) — EC2, Nginx' },
+  { name: 'LLM Integration & AI Agents', level: 80, tier: 'Advanced', projects: 'Docs (Real-Time Editor), DatenStrom-3AG chatbots' },
   { name: 'Tailwind, Redux Toolkit & Zustand', level: 85, tier: 'Advanced', projects: 'Replay.AI, Activerse, SoarX' },
 ];
 
