@@ -34,8 +34,16 @@ export const RESUME_DATA: ResumeData = {
       items: ["Next.js", "React", "Tailwind CSS", "Express.js", "Node.js", "Redux Toolkit", "Zustand"]
     },
     {
-      name: "AI & Cloud Architecture",
-      items: ["LLM Integration", "AI Agents", "Microservices", "AWS Lambda", "API Gateway", "IAM", "Secrets Manager", "CloudWatch"]
+      name: "AI & Intelligent Systems",
+      items: ["LLM Integration", "AI Agents", "Microservices"]
+    },
+    {
+      name: "AWS Cloud",
+      items: ["Lambda", "API Gateway", "EC2 / ECS", "ECR", "VPC", "S3", "Aurora & RDS", "ElastiCache", "SQS", "Route 53", "IAM", "Secrets Manager"]
+    },
+    {
+      name: "Observability & Security",
+      items: ["OpenTelemetry", "CloudWatch", "Amazon Grafana", "Casbin"]
     },
     {
       name: "DevOps & Deployment",
@@ -49,8 +57,8 @@ export const RESUME_DATA: ResumeData = {
       role: "Software Engineer Intern",
       period: "May 2026 – Present",
       tag: "Current Internship · Remote",
-      description: "Building scalable Python microservices with Redis caching and centralized tracing/monitoring — focused on backend reliability and infrastructure observability for distributed services.",
-      chips: ["Python Microservices", "Redis Caching", "Tracing & Monitoring", "Remote"]
+      description: "Building scalable Python microservices on AWS (Lambda, API Gateway, ECS/EC2, ECR, VPC) with ElastiCache/Redis caching, Aurora/RDS and S3 for storage, and SQS for async messaging.\n\nOwn observability end to end with OpenTelemetry distributed tracing surfaced through CloudWatch and Amazon Grafana dashboards, and IAM + Secrets Manager for access control and credential management. Implemented fine-grained authorization with Casbin, and maintain separate prod/dev environments with GitHub Actions CI/CD pipelines.",
+      chips: ["AWS Lambda & ECS", "OpenTelemetry Tracing", "Casbin Authorization", "ElastiCache/Redis", "GitHub Actions CI/CD", "Remote"]
     },
     {
       id: "avani",
