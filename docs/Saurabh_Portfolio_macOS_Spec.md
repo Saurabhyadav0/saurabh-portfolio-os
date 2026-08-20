@@ -499,7 +499,7 @@ saurabh@portfolio     Uptime:   Always building
 |_| |_|___|_| \_\_____| |_|  |_|_____|_____|
 
 Email: yadavv.saurab@gmail.com
-LinkedIn: linkedin.com/in/saurabh-yadav0
+LinkedIn: linkedin.com/in/saurabh-yadav-6406311bb
 ```
 
 ---
@@ -554,7 +554,7 @@ Mimics macOS Contacts app:
 │                                                     │
 │  📧  yadavv.saurab@gmail.com    [copy] [open]   │
 │  📱  99788 03941                    [copy]          │
-│  💼  linkedin.com/in/saurabh-yadav0 [open ↗]        │
+│  💼  linkedin.com/in/saurabh-yadav-6406311bb [open ↗]        │
 │  🐙  github.com/saurabhyadav0            [open ↗]        │
 │  🐦  @saurabh_dev (Twitter)           [open ↗]        │
 │                                                     │

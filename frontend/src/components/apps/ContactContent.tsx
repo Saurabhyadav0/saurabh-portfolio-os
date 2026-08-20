@@ -109,7 +109,7 @@ END:VCARD`;
               <Linkedin className="text-blue-400" size={18} />
               <div>
                 <p className="text-[10px] uppercase text-zinc-400 font-bold">LinkedIn</p>
-                <p className="text-xs font-semibold text-white">saurabh-yadav0</p>
+                <p className="text-xs font-semibold text-white">saurabh-yadav-6406311bb</p>
               </div>
             </div>
             <a 

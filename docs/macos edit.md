@@ -518,7 +518,7 @@ collaborating, or just want to talk tech — reach out.
 ### Links (display as icon + text):
 ```
 📧  yadavv.saurab@gmail.com
-💼  linkedin.com/in/saurabh-yadav0
+💼  linkedin.com/in/saurabh-yadav-6406311bb
 🐙  github.com/saurabhyadav0
 📱  99788 03941
 ```

@@ -111,7 +111,7 @@ export const TerminalContent: React.FC<TerminalContentProps> = ({ theme = 'dark'
 |_| |_|___|_| \\_\\_____| |_|  |_|_____|_____|`}
             </pre>
             <p className="text-white text-xs">Email: <span className="text-indigo-300">yadavv.saurab@gmail.com</span></p>
-            <p className="text-white text-xs">LinkedIn: <span className="text-blue-400">linkedin.com/in/saurabh-yadav0</span></p>
+            <p className="text-white text-xs">LinkedIn: <span className="text-blue-400">linkedin.com/in/saurabh-yadav-6406311bb</span></p>
             <p className="text-white text-xs">Resume: <a href={RESUME_DATA.contact.resume} target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">view on Google Drive</a></p>
           </div>
         );
