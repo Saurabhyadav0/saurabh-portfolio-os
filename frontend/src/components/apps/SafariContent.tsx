@@ -28,7 +28,7 @@ export const SafariContent: React.FC<SafariContentProps> = ({ theme = 'dark' }) 
     }
   };
 
-  const projectTags = ['All', 'Production', 'Frontend', 'Backend'];
+  const projectTags = ['All', 'Production', 'Frontend', 'Backend', 'AI/ML'];
 
   const filteredProjects = RESUME_DATA.projects.filter(p => {
     if (activeProjectFilter === 'All') return true;

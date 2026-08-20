@@ -16,7 +16,7 @@ export const RESUME_DATA: ResumeData = {
   },
   stats: [
     { value: "5", label: "Internships", sublabel: "Completed" },
-    { value: "8+", label: "Production", sublabel: "Projects Shipped" },
+    { value: "11+", label: "Production", sublabel: "Projects Shipped" },
     { value: "8.4", label: "CGPA", sublabel: "B.Tech AI-ML" },
     { value: "40%", label: "Load Velocity", sublabel: "Boost Delivered" },
     { value: "2", label: "Hacktoberfests", sublabel: "Contributed" }
@@ -152,6 +152,44 @@ export const RESUME_DATA: ResumeData = {
       description: "A computer vision application that identifies AI media manipulations using OpenCV face extraction and a custom PyTorch ResNet50 classification pipeline.\n\nWrapped in a Streamlit UI with a REST API for programmatic access.",
       chips: ["OpenCV Face Extraction", "Custom ResNet50", "Streamlit UI", "REST API"],
       stack: ["Python", "PyTorch", "ResNet50", "OpenCV", "Streamlit", "REST API"]
+    },
+    {
+      id: "cityfix",
+      title: "CityFix",
+      date: "2025",
+      status: "Live — cityplus-1.vercel.app",
+      github: "https://github.com/Saurabhyadav0/Cityplus_1",
+      live: "https://cityplus-1.vercel.app/",
+      featured: false,
+      tags: ["AI/ML", "Full-Stack"],
+      description: "A civic issue reporting and tracking platform — \"Empowering Citizens to Create Change.\" Residents report problems like streetlight outages, road damage, and water infrastructure issues with a photo, GPS location, and description, and the system auto-categorizes and prioritizes each report for the responsible department.\n\nBuilt with Next.js and Prisma, with Leaflet and the Google Maps API for location tagging, and Groq + OpenAI powering the automatic issue categorization.",
+      chips: ["Auto-Categorization", "GPS Tagging", "Leaflet Maps", "Prisma", "Live"],
+      stack: ["Next.js", "Prisma", "PostgreSQL", "Leaflet", "Google Maps API", "Groq", "OpenAI", "Tailwind CSS"]
+    },
+    {
+      id: "smart-waste-tracker",
+      title: "Smart Waste Tracker",
+      date: "2025",
+      status: "Live — sparkathon-walmart.vercel.app",
+      github: "https://github.com/saurabhyadav0",
+      live: "https://sparkathon-walmart.vercel.app/",
+      featured: false,
+      tags: ["AI/ML"],
+      description: "A dashboard to monitor spoilage and reduce waste, built with team Sparkers for the Walmart Sparkathon.\n\nTracks inventory and waste generation, surfaces AI-powered insights to flag optimization opportunities, and gives teams a central view of waste metrics to act on before spoilage happens.",
+      chips: ["AI Insights", "Spoilage Monitoring", "Inventory Tracking", "Live"],
+      stack: ["Next.js", "Clerk", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      id: "workradius-editor",
+      title: "WorkRadius Collaborative Editor",
+      date: "2025",
+      status: "Shipped",
+      github: "https://github.com/Saurabhyadav0/-hrGENie--assingment",
+      featured: false,
+      tags: ["AI/ML", "Backend", "Full-Stack"],
+      description: "A production-ready real-time collaborative document editor with AI writing assistance, built for the WorkRadius SDE Intern assignment.\n\nSocket.io powers live text synchronization, cursor broadcasting, and presence tracking across documents with owner/editor/viewer permissions. Google Gemini backs an AI toolkit for grammar checking, enhancement, summarization, completion, and suggestions. JWT auth with httpOnly cookies and refresh-token rotation, autosave, and a hardened Express API (helmet, rate limiting, validation). Fully dockerized with an Nginx reverse proxy for EC2 + PM2 deployment.",
+      chips: ["Real-Time Sync (Socket.io)", "Gemini AI Toolkit", "JWT + RBAC", "Dockerized"],
+      stack: ["React", "Vite", "Tailwind CSS", "Express", "MongoDB", "Socket.io", "Google Gemini", "Docker", "Nginx"]
     },
     {
       id: "activerse",
