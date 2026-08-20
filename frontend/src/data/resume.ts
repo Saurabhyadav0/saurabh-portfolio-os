@@ -90,6 +90,19 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
+      id: "saarthi-task-engine",
+      title: "Saarthi TaskEngine — Task Automation Platform",
+      date: "2026",
+      status: "Live — sarthi-assingment.vercel.app",
+      github: "https://github.com/Saurabhyadav0/sarthi-assingment",
+      live: "https://sarthi-assingment.vercel.app/",
+      featured: true,
+      tags: ["Full-Stack", "Backend"],
+      description: "A production-grade asynchronous task automation and job processing platform (Micro SaaS module), built for the Saarthi AI Full-Stack Engineering Challenge.\n\nExpress + BullMQ workers process jobs through a priority queue (URGENT/HIGH/MEDIUM/LOW) with exponential backoff retries and scheduled execution, while Socket.IO pushes live status transitions (PENDING → PROCESSING → COMPLETED/FAILED) straight to a Redux + TanStack Query Next.js dashboard.\n\nJWT access tokens with refresh-token rotation and RBAC (ADMIN/USER) secure the API; PostgreSQL via Prisma handles persistence, Redis backs both the queue and session cache. Fully dockerized with a docker-compose stack (Postgres, Redis, API, worker, frontend) and a GitHub Actions CI pipeline.",
+      chips: ["BullMQ Queues", "Socket.IO Real-Time", "JWT + RBAC", "Redis Caching", "Dockerized", "Live"],
+      stack: ["Next.js 14", "Express.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Redis", "BullMQ", "Socket.IO", "Docker", "Redux Toolkit", "TanStack Query"]
+    },
+    {
       id: "frame-my-goa-pic",
       title: "Frame in Goa",
       date: "2026",
