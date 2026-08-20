@@ -38,21 +38,12 @@ export const MailContent: React.FC<MailContentProps> = ({ onClose }) => {
     setSending(true);
 
     try {
-      // Try local backend first, fallback to production render endpoint if offline
-      let response: Response;
-      try {
-        response = await fetch('http://localhost:5000/api/messages', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        });
-      } catch {
-        response = await fetch('https://portfolio-zgam.onrender.com/api/messages', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        });
-      }
+      const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/messages`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
       if (!response.ok) throw new Error('Failed to send message');
 

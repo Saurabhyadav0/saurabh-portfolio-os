@@ -59,10 +59,10 @@ cd backend
 npm install
 ```
 
-Create a `.env` file (see `.gitignore` — `.env` is not committed) with:
+Copy `.env.example` to `.env` and fill in your MongoDB connection string:
 
 ```
-MONGODB_URI=<your-mongodb-connection-string>
+MONGO_URI=<your-mongodb-connection-string>
 PORT=5000
 ```
 
@@ -71,6 +71,8 @@ Then run:
 ```sh
 npm start        # or: npm run dev (auto-restart on change)
 ```
+
+The frontend also has a `.env.example` — copy it to `.env` and set `VITE_API_URL` to point at your backend (defaults to `http://localhost:5000` in dev).
 
 ## Editing Content
 
