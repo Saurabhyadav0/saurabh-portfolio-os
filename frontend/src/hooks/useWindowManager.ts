@@ -22,10 +22,20 @@ export const useWindowManager = (initialWindows: WindowState[] = []) => {
   }, [windows, zIndexCounter]);
 
   const focusWindow = useCallback((id: string) => {
-    setWindows(prev => prev.map(w => 
-      w.id === id 
-        ? { ...w, zIndex: zIndexCounter + 1, isMinimized: false } 
+    setWindows(prev => prev.map(w =>
+      w.id === id
+        ? { ...w, zIndex: zIndexCounter + 1, isMinimized: false }
         : w
+    ));
+    setZIndexCounter(prev => prev + 1);
+  }, [zIndexCounter]);
+
+  // Bumps z-index only — unlike focusWindow, never un-minimizes. Safe to call
+  // from a window's own mousedown handler, including during its minimize
+  // exit animation (where the window is still briefly mounted).
+  const bringToFront = useCallback((id: string) => {
+    setWindows(prev => prev.map(w =>
+      w.id === id ? { ...w, zIndex: zIndexCounter + 1 } : w
     ));
     setZIndexCounter(prev => prev + 1);
   }, [zIndexCounter]);
@@ -51,6 +61,7 @@ export const useWindowManager = (initialWindows: WindowState[] = []) => {
     setWindows,
     openWindow,
     focusWindow,
+    bringToFront,
     closeWindow,
     minimizeWindow,
     maximizeWindow,

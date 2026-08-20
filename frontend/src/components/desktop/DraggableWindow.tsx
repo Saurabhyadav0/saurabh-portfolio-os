@@ -6,7 +6,7 @@ import { WindowState, Theme } from '@/types';
 interface DraggableWindowProps {
   window: WindowState;
   onClose: (id: string) => void;
-  onFocus: (id: string) => void;
+  onBringToFront: (id: string) => void;
   onMaximize: (id: string) => void;
   onMinimize: (id: string) => void;
   theme: Theme;
@@ -16,7 +16,7 @@ interface DraggableWindowProps {
 export const DraggableWindow: React.FC<DraggableWindowProps> = ({
   window,
   onClose,
-  onFocus,
+  onBringToFront,
   onMaximize,
   onMinimize,
   theme,
@@ -70,8 +70,8 @@ export const DraggableWindow: React.FC<DraggableWindowProps> = ({
           ? 'bg-[#18181b]/95 border-white/10 text-white shadow-[0_25px_80px_rgba(0,0,0,0.6)]' 
           : 'bg-white/95 border-black/10 text-gray-900 shadow-[0_25px_80px_rgba(0,0,0,0.2)]'
       } pointer-events-auto backdrop-blur-xl`}
-      style={{ zIndex: window.zIndex }} 
-      onMouseDown={() => onFocus(window.id)}
+      style={{ zIndex: window.zIndex }}
+      onMouseDown={() => onBringToFront(window.id)}
     >
       {/* Window Header */}
       {!window.hideHeader && (

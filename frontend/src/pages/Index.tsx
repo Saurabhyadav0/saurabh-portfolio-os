@@ -119,6 +119,7 @@ const Index: React.FC = () => {
     windows,
     openWindow,
     focusWindow,
+    bringToFront,
     closeWindow,
     minimizeWindow,
     maximizeWindow,
@@ -411,7 +412,7 @@ const Index: React.FC = () => {
                 theme={theme}
                 isMobile={false}
                 onClose={closeWindow}
-                onFocus={handleFocusWindow}
+                onBringToFront={bringToFront}
                 onMaximize={maximizeWindow}
                 onMinimize={minimizeWindow}
               />
