@@ -36,6 +36,7 @@ import { SystemPreferences } from '@/components/apps/SystemPreferences';
 import { useWindowManager } from '@/hooks/useWindowManager';
 import { useTheme } from '@/hooks/useTheme';
 import { WALLPAPERS } from '@/data/wallpapers';
+import { RESUME_DATA } from '@/data/resume';
 import { DesktopIcon as DesktopIconType, ContextMenuState } from '@/types';
 import { toast } from '@/hooks/use-toast';
 
@@ -379,12 +380,12 @@ const Index: React.FC = () => {
               </div>
               <div className="grid grid-cols-2 gap-2 text-center text-xs">
                 <div className="bg-white/5 p-2 rounded-xl border border-white/5">
-                  <p className="font-black text-indigo-400 text-sm">400+</p>
-                  <p className="text-[9px] opacity-70">REST Endpoints</p>
+                  <p className="font-black text-indigo-400 text-sm">{RESUME_DATA.stats[2].value}</p>
+                  <p className="text-[9px] opacity-70">{RESUME_DATA.stats[2].sublabel}</p>
                 </div>
                 <div className="bg-white/5 p-2 rounded-xl border border-white/5">
-                  <p className="font-black text-emerald-400 text-sm">50+</p>
-                  <p className="text-[9px] opacity-70">DB Tables</p>
+                  <p className="font-black text-emerald-400 text-sm">{RESUME_DATA.stats[3].value}</p>
+                  <p className="text-[9px] opacity-70">{RESUME_DATA.stats[3].sublabel}</p>
                 </div>
               </div>
             </div>
