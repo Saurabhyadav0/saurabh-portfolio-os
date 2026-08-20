@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Github, Linkedin, Copy, Check, ExternalLink, Download, Send } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin, Copy, Check, ExternalLink, Download, Send, FileText } from 'lucide-react';
 import { RESUME_DATA } from '@/data/resume';
 import { toast } from '@/hooks/use-toast';
 import { MailContent } from './MailContent';
@@ -130,11 +130,29 @@ END:VCARD`;
                 <p className="text-xs font-semibold text-white">saurabhyadav0</p>
               </div>
             </div>
-            <a 
-              href={RESUME_DATA.contact.github} 
-              target="_blank" 
+            <a
+              href={RESUME_DATA.contact.github}
+              target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 rounded-lg hover:bg-white/10 text-zinc-300 hover:text-white transition-colors"
+            >
+              <ExternalLink size={14} />
+            </a>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <FileText className="text-amber-400" size={18} />
+              <div>
+                <p className="text-[10px] uppercase text-zinc-400 font-bold">Resume</p>
+                <p className="text-xs font-semibold text-white">View on Google Drive</p>
+              </div>
+            </div>
+            <a
+              href={RESUME_DATA.contact.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-1.5 rounded-lg hover:bg-white/10 text-amber-400 hover:text-amber-300 transition-colors"
             >
               <ExternalLink size={14} />
             </a>

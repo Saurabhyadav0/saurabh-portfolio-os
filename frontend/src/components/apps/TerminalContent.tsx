@@ -112,6 +112,7 @@ export const TerminalContent: React.FC<TerminalContentProps> = ({ theme = 'dark'
             </pre>
             <p className="text-white text-xs">Email: <span className="text-indigo-300">yadavv.saurab@gmail.com</span></p>
             <p className="text-white text-xs">LinkedIn: <span className="text-blue-400">linkedin.com/in/saurabh-yadav0</span></p>
+            <p className="text-white text-xs">Resume: <a href={RESUME_DATA.contact.resume} target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">view on Google Drive</a></p>
           </div>
         );
         break;
@@ -123,13 +124,20 @@ export const TerminalContent: React.FC<TerminalContentProps> = ({ theme = 'dark'
         output = (
           <div className="text-emerald-400">
             <p>✅ Downloading Saurabh_Yadav_Resume.pdf...</p>
-            <a 
-              href="/Saurabh_Yadav_Resume.pdf" 
-              download="Saurabh_Yadav_Resume.pdf" 
+            <a
+              href="/Saurabh_Yadav_Resume.pdf"
+              download="Saurabh_Yadav_Resume.pdf"
               className="text-indigo-300 underline font-bold"
             >
               Click here if download does not start automatically.
             </a>
+            <p className="mt-1">
+              Or{' '}
+              <a href={RESUME_DATA.contact.resume} target="_blank" rel="noopener noreferrer" className="text-amber-400 underline font-bold">
+                view it on Google Drive
+              </a>
+              .
+            </p>
           </div>
         );
         break;

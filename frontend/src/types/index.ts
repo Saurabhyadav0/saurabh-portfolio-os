@@ -98,6 +98,7 @@ export interface ResumeData {
     phone: string;
     github: string;
     linkedin: string;
+    resume: string;
   };
   stats: StatItem[];
   aboutHeading: string;

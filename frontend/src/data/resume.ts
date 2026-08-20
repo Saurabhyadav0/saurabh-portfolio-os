@@ -12,7 +12,8 @@ export const RESUME_DATA: ResumeData = {
     email: "yadavv.saurab@gmail.com",
     phone: "+91 8528797606",
     github: "https://github.com/saurabhyadav0",
-    linkedin: "https://www.linkedin.com/in/saurabh-yadav0"
+    linkedin: "https://www.linkedin.com/in/saurabh-yadav0",
+    resume: "https://drive.google.com/file/d/1TBJ2kOT66axlm2k6w3ZqKCkiVeNZ0jW6/view?usp=sharing"
   },
   stats: [
     { value: "5", label: "Internships", sublabel: "Completed" },
