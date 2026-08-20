@@ -293,5 +293,37 @@ export const RESUME_DATA: ResumeData = {
     school: "DigitalOcean Hacktoberfest 2023 & 2024",
     period: "Oct 2023 – Oct 2024",
     link: "https://github.com/saurabhyadav0"
-  }
+  },
+  achievements: [
+    {
+      icon: "🎓",
+      title: "Head Student Placement Coordinator",
+      description: "Training & Placement Cell, UIET MDU (Sept 2024 – Present). Coordinate placement drives and Sportech events — managing registrations, logistics, and company coordination."
+    },
+    {
+      icon: "🏆",
+      title: "BNB Chain Bombay Hackathon",
+      description: "Invited participant."
+    },
+    {
+      icon: "🥉",
+      title: "NextGenHack RKGIT",
+      description: "Ranked 11th."
+    },
+    {
+      icon: "🏅",
+      title: "NexHack — Geeta University",
+      description: "Top 20 Finalist."
+    },
+    {
+      icon: "📱",
+      title: "Samsung Solve for Tomorrow Hackathon 2025",
+      description: "Participant."
+    },
+    {
+      icon: "🌐",
+      title: "Hacktoberfest 2023 & 2024",
+      description: "Open source contributor across both years."
+    }
+  ]
 };

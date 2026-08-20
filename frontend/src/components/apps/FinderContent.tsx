@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Folder, Award, FileText, ExternalLink, Briefcase, Code, Layers, User } from 'lucide-react';
+import { Folder, Award, FileText, ExternalLink, Briefcase, Code, Layers, User, Trophy } from 'lucide-react';
 import { RESUME_DATA } from '@/data/resume';
 
 export const FinderContent: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'projects' | 'experience' | 'stack' | 'certifications'>('projects');
+  const [activeTab, setActiveTab] = useState<'projects' | 'experience' | 'stack' | 'certifications' | 'achievements'>('projects');
 
   return (
     <div className="h-full flex flex-col md:flex-row overflow-hidden bg-[#18181b] text-zinc-100 font-sans select-text">
@@ -43,6 +43,14 @@ export const FinderContent: React.FC = () => {
               }`}
             >
               <Award size={14} className="text-amber-400" /> Certification
+            </button>
+            <button
+              onClick={() => setActiveTab('achievements')}
+              className={`w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg font-medium transition-colors whitespace-nowrap text-left ${
+                activeTab === 'achievements' ? 'bg-indigo-600 text-white' : 'text-zinc-400 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              <Trophy size={14} className="text-yellow-400" /> Achievements
             </button>
           </div>
         </div>
@@ -192,6 +200,29 @@ export const FinderContent: React.FC = () => {
               >
                 View Credential <ExternalLink size={12} />
               </a>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'achievements' && (
+          <div className="space-y-6">
+            <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
+              <h2 className="text-base font-bold text-white flex items-center gap-2">
+                <Trophy size={16} className="text-yellow-400" /> Hackathons & Achievements
+              </h2>
+              <span className="text-xs text-zinc-500 font-mono">{RESUME_DATA.achievements.length} Items</span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {RESUME_DATA.achievements.map((a, i) => (
+                <div key={i} className="bg-zinc-900/60 rounded-xl p-4 border border-zinc-800 flex items-start gap-3">
+                  <span className="text-xl leading-none">{a.icon}</span>
+                  <div>
+                    <h3 className="font-bold text-sm text-white">{a.title}</h3>
+                    <p className="text-xs text-zinc-400 mt-0.5 leading-relaxed">{a.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}

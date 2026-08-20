@@ -85,6 +85,12 @@ export interface Certification {
   period: string;
 }
 
+export interface Achievement {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 export interface ResumeData {
   name: string;
   role: string;
@@ -114,6 +120,7 @@ export interface ResumeData {
     status: string;
   };
   certification: Certification;
+  achievements: Achievement[];
 }
 
 export type ContextMenuState = {

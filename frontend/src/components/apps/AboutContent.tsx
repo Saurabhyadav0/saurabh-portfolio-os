@@ -9,7 +9,7 @@ interface AboutContentProps {
 }
 
 export const AboutContent: React.FC<AboutContentProps> = ({ theme = 'dark', onOpenApp }) => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'internships' | 'education' | 'certifications'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'internships' | 'education' | 'certifications' | 'achievements'>('overview');
 
   return (
     <div className={`h-full flex flex-col font-sans select-text ${
@@ -43,13 +43,21 @@ export const AboutContent: React.FC<AboutContentProps> = ({ theme = 'dark', onOp
         >
           Education
         </button>
-        <button 
+        <button
           onClick={() => setActiveTab('certifications')}
           className={`px-3 py-1 rounded-lg transition-all ${
             activeTab === 'certifications' ? 'bg-indigo-600 text-white shadow-sm' : 'text-zinc-400 hover:text-white'
           }`}
         >
           Certification
+        </button>
+        <button
+          onClick={() => setActiveTab('achievements')}
+          className={`px-3 py-1 rounded-lg transition-all ${
+            activeTab === 'achievements' ? 'bg-indigo-600 text-white shadow-sm' : 'text-zinc-400 hover:text-white'
+          }`}
+        >
+          Achievements
         </button>
       </div>
 
@@ -137,14 +145,28 @@ export const AboutContent: React.FC<AboutContentProps> = ({ theme = 'dark', onOp
                 <p className="text-xs text-zinc-400">{RESUME_DATA.certification.school} • {RESUME_DATA.certification.period}</p>
               </div>
             </div>
-            <a 
-              href={RESUME_DATA.certification.link} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={RESUME_DATA.certification.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-4 py-2 bg-amber-500 text-black font-bold text-xs rounded-full hover:bg-amber-400 transition-colors uppercase tracking-wider"
             >
               View Credential ↗
             </a>
+          </div>
+        )}
+
+        {activeTab === 'achievements' && (
+          <div className="space-y-3">
+            {RESUME_DATA.achievements.map((a, i) => (
+              <div key={i} className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 flex items-start gap-3">
+                <span className="text-xl leading-none">{a.icon}</span>
+                <div>
+                  <h3 className="font-bold text-sm text-white">{a.title}</h3>
+                  <p className="text-xs text-zinc-400 mt-0.5 leading-relaxed">{a.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>
