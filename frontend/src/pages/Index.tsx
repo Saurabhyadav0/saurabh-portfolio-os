@@ -364,7 +364,7 @@ const Index: React.FC = () => {
                 "I build systems that think, scale, and ship."
               </p>
               <p className="text-[10px] text-zinc-400 leading-normal">
-                B.Tech AI-ML, Class of 2027 · 5 Internships · 10+ Projects Shipped
+                B.Tech AI-ML, Class of 2027 · 5 Internships · 14+ Projects Shipped
               </p>
             </div>
             <div className="p-4 rounded-2xl bg-black/40 backdrop-blur-2xl border border-white/10 text-white shadow-2xl space-y-3">

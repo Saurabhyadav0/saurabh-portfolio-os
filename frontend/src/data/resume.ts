@@ -17,7 +17,7 @@ export const RESUME_DATA: ResumeData = {
   },
   stats: [
     { value: "5", label: "Internships", sublabel: "Completed" },
-    { value: "10+", label: "Production", sublabel: "Projects Shipped" },
+    { value: "14+", label: "Production", sublabel: "Projects Shipped" },
     { value: "8.4", label: "CGPA", sublabel: "B.Tech AI-ML" },
     { value: "40%", label: "Load Velocity", sublabel: "Boost Delivered" },
     { value: "2", label: "Hacktoberfests", sublabel: "Contributed" }
@@ -110,6 +110,19 @@ export const RESUME_DATA: ResumeData = {
       description: "A production-grade asynchronous task automation and job processing platform (Micro SaaS module), built for the Saarthi AI Full-Stack Engineering Challenge.\n\nExpress + BullMQ workers process jobs through a priority queue (URGENT/HIGH/MEDIUM/LOW) with exponential backoff retries and scheduled execution, while Socket.IO pushes live status transitions (PENDING → PROCESSING → COMPLETED/FAILED) straight to a Redux + TanStack Query Next.js dashboard.\n\nJWT access tokens with refresh-token rotation and RBAC (ADMIN/USER) secure the API; PostgreSQL via Prisma handles persistence, Redis backs both the queue and session cache. Fully dockerized with a docker-compose stack (Postgres, Redis, API, worker, frontend) and a GitHub Actions CI pipeline.",
       chips: ["BullMQ Queues", "Socket.IO Real-Time", "JWT + RBAC", "Redis Caching", "Dockerized", "Live"],
       stack: ["Next.js 14", "Express.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Redis", "BullMQ", "Socket.IO", "Docker", "Redux Toolkit", "TanStack Query"]
+    },
+    {
+      id: "travel-sathi",
+      title: "Travel Sathi — Travel Marketplace Platform",
+      date: "2026",
+      status: "Live — travel-sathi-nextjs.vercel.app",
+      github: "https://github.com/Saurabhyadav0/Travel-sathi-nextjs",
+      live: "https://travel-sathi-nextjs.vercel.app/",
+      featured: true,
+      tags: ["Production", "Full-Stack"],
+      description: "A live, in-production travel marketplace connecting travelers with tour vendors — browse and book curated trips, pay securely via Razorpay, and get automatic booking confirmation emails.\n\nThree-sided platform: travelers search, filter, book, and review tours; vendors register with document verification, manage listings, and track revenue through an analytics dashboard; admins approve vendors and oversee bookings platform-wide.",
+      chips: ["Razorpay Payments", "Vendor Dashboard", "Admin Approval System", "Live"],
+      stack: ["Next.js 16", "TypeScript", "PostgreSQL", "Prisma ORM", "Neon DB", "Redux Toolkit", "Tailwind CSS", "Radix UI", "Cloudinary", "JWT"]
     },
     {
       id: "frame-my-goa-pic",
@@ -225,6 +238,45 @@ export const RESUME_DATA: ResumeData = {
       description: "A live, in-production AI-driven engagement toolkit automation platform built for 1,000+ content creators — handling automated engagement workflows through a React and Redux-powered interface.",
       chips: ["1,000+ Creators", "Redux", "shadcn/ui", "Live"],
       stack: ["React", "Redux", "Tailwind CSS", "shadcn/ui"]
+    },
+    {
+      id: "epark",
+      title: "epark — Urban Mobility & Parking Platform",
+      date: "2026",
+      status: "Live — ncc-epark.vercel.app",
+      github: "https://github.com/Saurabhyadav0/ncc-epark",
+      live: "https://ncc-epark.vercel.app/",
+      featured: false,
+      tags: ["Full-Stack", "Backend"],
+      description: "A unified parking and urban mobility platform built for India's Tier 2/3 cities — real-time parking discovery and slot booking, plus a peer-to-peer marketplace where homeowners and businesses list driveways and garages for rent.\n\nRazorpay handles instant checkout, Leaflet powers map-based discovery and navigation to reserved spots, and a vehicle services hub locates nearby EV charging points, CNG stations, and mechanics.",
+      chips: ["P2P Parking Marketplace", "Leaflet Maps", "Razorpay Checkout", "Live"],
+      stack: ["Next.js", "Clerk", "PostgreSQL", "Prisma ORM", "Leaflet", "Razorpay", "Tailwind CSS"]
+    },
+    {
+      id: "shopease",
+      title: "ShopEase — E-Commerce Platform",
+      date: "2025",
+      status: "Live — shop-ease-omega.vercel.app",
+      github: "https://github.com/Saurabhyadav0/ease-shop",
+      live: "https://shop-ease-omega.vercel.app/",
+      featured: false,
+      tags: ["Frontend", "Full-Stack"],
+      description: "A multi-category online retail platform — browse and shop electronics, fashion, and more, with Razorpay checkout and Clerk-authenticated accounts.\n\nBuilt on a MongoDB/Mongoose backend, with TanStack Query for data fetching and Zustand for cart/UI state on top of a Radix UI component library.",
+      chips: ["Razorpay Checkout", "Clerk Auth", "Multi-Category Catalog", "Live"],
+      stack: ["Next.js", "MongoDB", "Mongoose", "Clerk", "Razorpay", "TanStack Query", "Zustand", "Radix UI", "Tailwind CSS"]
+    },
+    {
+      id: "tastebite",
+      title: "TasteBite — Restaurant Website",
+      date: "2025",
+      status: "Live — zyrix-craft-task.vercel.app",
+      github: "https://github.com/Saurabhyadav0/zyrix-craft-task",
+      live: "https://zyrix-craft-task.vercel.app/",
+      featured: false,
+      tags: ["Frontend", "UI"],
+      description: "A fully responsive restaurant website with a warm, modern design — Home, Menu, Gallery, Reservation, and Contact pages, dark/light theme switching with persistent storage, and Framer Motion animations throughout.",
+      chips: ["Dark/Light Mode", "Reservation Form", "Framer Motion", "Live"],
+      stack: ["React 19", "Vite", "Tailwind CSS", "shadcn/ui", "React Router", "Framer Motion"]
     }
   ],
   howIWork: [
