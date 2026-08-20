@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { X, Minus, Maximize2, ChevronLeft } from 'lucide-react';
 import { WindowState, Theme } from '@/types';
@@ -128,8 +128,14 @@ export const DraggableWindow: React.FC<DraggableWindowProps> = ({
 
       {/* Window Body Content */}
       <div className="flex-1 overflow-auto relative flex flex-col">
-        {window.content} 
-        
+        <Suspense fallback={
+          <div className="h-full w-full flex items-center justify-center">
+            <div className="w-6 h-6 border-2 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
+          </div>
+        }>
+          {window.content}
+        </Suspense>
+
         {/* Resize Handle for desktop */}
         {!isMaximized && !isMobile && (
           <div 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Folder, User, Globe, Terminal, Mail, Sparkles, Briefcase, Layers, Cpu, Gamepad2, Play, Settings } from 'lucide-react';
 
@@ -13,25 +13,35 @@ import { BootScreen } from '@/components/desktop/BootScreen';
 
 import { IOSStatusBar, IOSHomeIndicator } from '@/components/ios/IOSStatusBar';
 import { IOSHomeScreen } from '@/components/ios/IOSHomeScreen';
-import { IPadSplitView } from '@/components/ios/IPadSplitView';
+const IPadSplitView = lazy(() => import('@/components/ios/IPadSplitView').then(m => ({ default: m.IPadSplitView })));
 
-import { AboutContent } from '@/components/apps/AboutContent';
-import { FinderContent } from '@/components/apps/FinderContent';
-import { ExperienceContent } from '@/components/apps/ExperienceContent';
-import { SkillsContent } from '@/components/apps/SkillsContent';
-import { ContactContent } from '@/components/apps/ContactContent';
-import { TerminalContent } from '@/components/apps/TerminalContent';
+// Safari is the default window shown on boot, so it loads eagerly.
+// Every other app window is only ever mounted once the user opens it,
+// so each gets its own chunk and is only fetched on demand.
 import { SafariContent } from '@/components/apps/SafariContent';
-import { ChromeContent } from '@/components/apps/ChromeContent';
-import { NotesContent } from '@/components/apps/NotesContent';
-import { VSCodeContent } from '@/components/apps/VSCodeContent';
-import { SpotifyContent } from '@/components/apps/SpotifyContent';
-import { MailContent } from '@/components/apps/MailContent';
-import { SnakeGame } from '@/components/apps/SnakeGame';
-import { TetrisGame } from '@/components/apps/TetrisGame';
-import { TicTacToe } from '@/components/apps/TicTacToe';
-import { GamesFolderContent } from '@/components/apps/GamesFolderContent';
-import { SystemPreferences } from '@/components/apps/SystemPreferences';
+
+const AboutContent = lazy(() => import('@/components/apps/AboutContent').then(m => ({ default: m.AboutContent })));
+const FinderContent = lazy(() => import('@/components/apps/FinderContent').then(m => ({ default: m.FinderContent })));
+const ExperienceContent = lazy(() => import('@/components/apps/ExperienceContent').then(m => ({ default: m.ExperienceContent })));
+const SkillsContent = lazy(() => import('@/components/apps/SkillsContent').then(m => ({ default: m.SkillsContent })));
+const ContactContent = lazy(() => import('@/components/apps/ContactContent').then(m => ({ default: m.ContactContent })));
+const TerminalContent = lazy(() => import('@/components/apps/TerminalContent').then(m => ({ default: m.TerminalContent })));
+const ChromeContent = lazy(() => import('@/components/apps/ChromeContent').then(m => ({ default: m.ChromeContent })));
+const NotesContent = lazy(() => import('@/components/apps/NotesContent').then(m => ({ default: m.NotesContent })));
+const VSCodeContent = lazy(() => import('@/components/apps/VSCodeContent').then(m => ({ default: m.VSCodeContent })));
+const SpotifyContent = lazy(() => import('@/components/apps/SpotifyContent').then(m => ({ default: m.SpotifyContent })));
+const MailContent = lazy(() => import('@/components/apps/MailContent').then(m => ({ default: m.MailContent })));
+const SnakeGame = lazy(() => import('@/components/apps/SnakeGame').then(m => ({ default: m.SnakeGame })));
+const TetrisGame = lazy(() => import('@/components/apps/TetrisGame').then(m => ({ default: m.TetrisGame })));
+const TicTacToe = lazy(() => import('@/components/apps/TicTacToe').then(m => ({ default: m.TicTacToe })));
+const GamesFolderContent = lazy(() => import('@/components/apps/GamesFolderContent').then(m => ({ default: m.GamesFolderContent })));
+const SystemPreferences = lazy(() => import('@/components/apps/SystemPreferences').then(m => ({ default: m.SystemPreferences })));
+
+const AppLoadingFallback: React.FC = () => (
+  <div className="h-full w-full flex items-center justify-center bg-[#18181b]">
+    <div className="w-6 h-6 border-2 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
+  </div>
+);
 
 import { useWindowManager } from '@/hooks/useWindowManager';
 import { useTheme } from '@/hooks/useTheme';
@@ -315,7 +325,9 @@ const Index: React.FC = () => {
                   <div className="w-12" />
                 </div>
                 <div className="flex-1 overflow-auto">
-                  {getAppContent(iosActiveApp, 'dark', () => setIosActiveApp(null), openApp).content}
+                  <Suspense fallback={<AppLoadingFallback />}>
+                    {getAppContent(iosActiveApp, 'dark', () => setIosActiveApp(null), openApp).content}
+                  </Suspense>
                 </div>
                 <IOSHomeIndicator dark={false} />
               </div>
@@ -326,7 +338,9 @@ const Index: React.FC = () => {
 
       {/* TABLET VIEW */}
       {screenMode === 'tablet' && (
-        <IPadSplitView theme={theme} wallpaperUrl={WALLPAPERS[wallpaperIndex]} />
+        <Suspense fallback={<AppLoadingFallback />}>
+          <IPadSplitView theme={theme} wallpaperUrl={WALLPAPERS[wallpaperIndex]} />
+        </Suspense>
       )}
 
       {/* DESKTOP VIEW */}
