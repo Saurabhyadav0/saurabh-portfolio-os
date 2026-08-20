@@ -50,7 +50,7 @@ END:VCARD`;
         {/* Contact Header Card */}
         <div className="flex items-center gap-4 border-b border-zinc-800 pb-5">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white text-xl font-bold border border-white/20 shadow-lg">
-            VU
+            {RESUME_DATA.name.split(' ').map(n => n[0]).join('')}
           </div>
           <div>
             <h1 className="text-xl font-bold">{RESUME_DATA.name}</h1>

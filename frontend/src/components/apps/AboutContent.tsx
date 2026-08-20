@@ -58,7 +58,7 @@ export const AboutContent: React.FC<AboutContentProps> = ({ theme = 'dark', onOp
         {activeTab === 'overview' && (
           <div className="flex flex-col items-center text-center max-w-lg mx-auto space-y-4">
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-emerald-500 shadow-2xl flex items-center justify-center text-white text-3xl font-black border border-white/20">
-              VU
+              {RESUME_DATA.name.split(' ').map(n => n[0]).join('')}
             </div>
             <div>
               <h1 className="text-2xl font-black">{RESUME_DATA.name}</h1>
