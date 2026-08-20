@@ -17,7 +17,7 @@ export const RESUME_DATA: ResumeData = {
   },
   stats: [
     { value: "5", label: "Internships", sublabel: "Completed" },
-    { value: "11+", label: "Production", sublabel: "Projects Shipped" },
+    { value: "10+", label: "Production", sublabel: "Projects Shipped" },
     { value: "8.4", label: "CGPA", sublabel: "B.Tech AI-ML" },
     { value: "40%", label: "Load Velocity", sublabel: "Boost Delivered" },
     { value: "2", label: "Hacktoberfests", sublabel: "Contributed" }
@@ -155,7 +155,7 @@ export const RESUME_DATA: ResumeData = {
       title: "Deepfake Detection System",
       date: "2025",
       status: "Shipped",
-      github: "https://github.com/saurabhyadav0",
+      github: "https://github.com/Saurabhyadav0/deepfake",
       featured: true,
       tags: ["Backend", "AI/ML"],
       description: "A computer vision application that identifies AI media manipulations using OpenCV face extraction and a custom PyTorch ResNet50 classification pipeline.\n\nWrapped in a Streamlit UI with a REST API for programmatic access.",
@@ -189,18 +189,6 @@ export const RESUME_DATA: ResumeData = {
       stack: ["Next.js", "Clerk", "Tailwind CSS", "TypeScript"]
     },
     {
-      id: "workradius-editor",
-      title: "WorkRadius Collaborative Editor",
-      date: "2025",
-      status: "Shipped",
-      github: "https://github.com/Saurabhyadav0/-hrGENie--assingment",
-      featured: false,
-      tags: ["AI/ML", "Backend", "Full-Stack"],
-      description: "A production-ready real-time collaborative document editor with AI writing assistance, built for the WorkRadius SDE Intern assignment.\n\nSocket.io powers live text synchronization, cursor broadcasting, and presence tracking across documents with owner/editor/viewer permissions. Google Gemini backs an AI toolkit for grammar checking, enhancement, summarization, completion, and suggestions. JWT auth with httpOnly cookies and refresh-token rotation, autosave, and a hardened Express API (helmet, rate limiting, validation). Fully dockerized with an Nginx reverse proxy for EC2 + PM2 deployment.",
-      chips: ["Real-Time Sync (Socket.io)", "Gemini AI Toolkit", "JWT + RBAC", "Dockerized"],
-      stack: ["React", "Vite", "Tailwind CSS", "Express", "MongoDB", "Socket.io", "Google Gemini", "Docker", "Nginx"]
-    },
-    {
       id: "activerse",
       title: "Activerse",
       date: "2025",
@@ -215,16 +203,15 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       id: "docs-realtime",
-      title: "Docs — Real-Time Collaborative System",
+      title: "Docs — Real-Time Collaborative Editor",
       date: "2025",
-      status: "Live",
-      github: "https://github.com/saurabhyadav0",
-      live: "https://github.com/saurabhyadav0",
+      status: "Shipped",
+      github: "https://github.com/Saurabhyadav0/-hrGENie--assingment",
       featured: false,
-      tags: ["Backend", "Real-Time"],
-      description: "A collaborative real-time cloud suite with live chat and secure Docker containerization — deployed on AWS EC2 behind Nginx, with LLM-assisted features layered into the collaboration workflow.",
-      chips: ["Socket.io", "AWS EC2", "Nginx", "Docker"],
-      stack: ["Node.js", "Express", "Socket.io", "AWS EC2", "Nginx", "LLM"]
+      tags: ["Backend", "AI/ML", "Full-Stack"],
+      description: "A production-ready real-time collaborative document editor with AI writing assistance, built for an SDE Intern assignment.\n\nSocket.io powers live text synchronization, cursor broadcasting, and presence tracking across documents with owner/editor/viewer permissions. Google Gemini backs an AI toolkit for grammar checking, enhancement, summarization, completion, and suggestions. JWT auth with httpOnly cookies and refresh-token rotation, autosave, and a hardened Express API (helmet, rate limiting, validation). Fully dockerized with an Nginx reverse proxy for EC2 + PM2 deployment.",
+      chips: ["Real-Time Sync (Socket.io)", "Gemini AI Toolkit", "JWT + RBAC", "Dockerized"],
+      stack: ["React", "Vite", "Tailwind CSS", "Express", "MongoDB", "Socket.io", "Google Gemini", "Docker", "Nginx"]
     },
     {
       id: "replay-ai",
