@@ -90,6 +90,19 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
+      id: "frame-my-goa-pic",
+      title: "Frame in Goa",
+      date: "2026",
+      status: "Live — frame-my-goa-pic.vercel.app",
+      github: "https://github.com/Saurabhyadav0/frame-my-goa-pic",
+      live: "https://frame-my-goa-pic.vercel.app/",
+      featured: false,
+      tags: ["Frontend", "UI"],
+      description: "A web tool built for Hacker House Goa 2026 — upload a photo, get back a branded HH Goa 2026 graphic in seconds, ready to download and share on X.\n\nTwo formats: a circular PFP frame, and a Builder ID card with photo, name, and role laid out like an event badge. Fully client-side — drag-to-reframe, pinch-to-zoom cropping, HEIC/HEIF auto-conversion, and instant canvas rendering with no server round-trip.",
+      chips: ["Client-Side Canvas", "HEIC/HEIF Support", "Drag-to-Reframe", "Share to X", "Live"],
+      stack: ["TanStack Start", "React", "TypeScript", "Tailwind CSS", "Radix UI", "Vite", "Vercel"]
+    },
+    {
       id: "exam-signal-board",
       title: "Exam Signal Board",
       date: "2026",
