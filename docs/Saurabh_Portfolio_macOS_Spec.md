@@ -245,8 +245,8 @@ Layout mimics macOS "About This Mac" dialog:
 │   SAURABH YADAV                                        │
 │   Full-Stack & AI Developer                             │
 │                                                         │
-│   Version  2026.1  (B.Tech AI-ML Final Year)            │
-│   Silver Oak University, Ahmedabad, Gujarat             │
+│   Version  2026.1  (B.Tech AI-ML, Class of 2027)        │
+│   Maharshi Dayanand University, Haryana                 │
 │                                                         │
 │   ─────────────────────────────────────────────────     │
 │                                                         │
@@ -270,7 +270,7 @@ Tabs at top (like macOS About This Mac tabs):
 ```
 - Overview: the layout above
 - Internships: shows Canovet + Hubbl cards side by side
-- Education: Silver Oak + Sheryians timeline
+- Education: Maharshi Dayanand University timeline
 - Certifications: any certs (Sheryians cohort, etc.)
 
 ---
@@ -563,7 +563,7 @@ Mimics macOS Contacts app:
 │  NOTES                                              │
 │  Open to full-time · internship · remote            │
 │  Available: Immediately                             │
-│  Graduating: 2026                                   │
+│  Graduating: 2027                                   │
 │                                                     │
 │  ─────────────────────────────────────────────────  │
 │  [  Send Message  ]  [  Download vCard  ]           │

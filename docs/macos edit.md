@@ -36,7 +36,7 @@ Full-Stack Engineer · AI Systems · 2 Internships · 1 SaaS in Production
 I design and build production-grade software — from database schemas and API 
 architectures to intelligent automation pipelines and cross-platform interfaces. 
 Currently interning at two companies simultaneously while shipping my own 
-multi-tenant SaaS product. Final year B.Tech AI-ML, Silver Oak University (2026).
+multi-tenant SaaS product. Final year B.Tech AI-ML, Maharshi Dayanand University (2027).
 ```
 
 **Why this works:**
@@ -551,7 +551,7 @@ Description: Final-year B.Tech AI-ML engineer with 2 internships and production
 SaaS experience. Building systems at the intersection of software engineering 
 and intelligent automation.
 Keywords: Full Stack Developer Ahmedabad, AI Engineer India, Node.js Developer, 
-React Developer, Backend Engineer, Gen AI Developer, B.Tech AI-ML 2026
+React Developer, Backend Engineer, Gen AI Developer, B.Tech AI-ML 2027
 OG Image: A clean dark card with your name, title, and 2–3 key stats
 ```
 

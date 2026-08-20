@@ -151,7 +151,7 @@ export const SafariContent: React.FC<SafariContentProps> = ({ theme = 'dark' }) 
               
               <div className="relative z-10 space-y-6">
                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                  <Sparkles size={13} /> Final Year B.Tech AI-ML (2026) · Open To Opportunities
+                  <Sparkles size={13} /> B.Tech AI-ML, Class of 2027 · Open To Opportunities
                 </span>
 
                 <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">

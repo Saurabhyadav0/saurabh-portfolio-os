@@ -16,7 +16,7 @@ export const RESUME_DATA: ResumeData = {
   },
   stats: [
     { value: "5", label: "Internships", sublabel: "Completed" },
-    { value: "5+", label: "Production", sublabel: "Projects Shipped" },
+    { value: "8+", label: "Production", sublabel: "Projects Shipped" },
     { value: "8.4", label: "CGPA", sublabel: "B.Tech AI-ML" },
     { value: "40%", label: "Load Velocity", sublabel: "Boost Delivered" },
     { value: "2", label: "Hacktoberfests", sublabel: "Contributed" }
