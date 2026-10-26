@@ -17,7 +17,7 @@ export const RESUME_DATA: ResumeData = {
   },
   stats: [
     { value: "5", label: "Internships", sublabel: "Completed" },
-    { value: "14+", label: "Production", sublabel: "Projects Shipped" },
+    { value: "18+", label: "Production", sublabel: "Projects Shipped" },
     { value: "8.4", label: "CGPA", sublabel: "B.Tech AI-ML" },
     { value: "40%", label: "Load Velocity", sublabel: "Boost Delivered" },
     { value: "2", label: "Hacktoberfests", sublabel: "Contributed" }
@@ -27,15 +27,19 @@ export const RESUME_DATA: ResumeData = {
   techStackGroups: [
     {
       name: "Languages & Databases",
-      items: ["JavaScript", "TypeScript", "Python", "Java", "SQL", "PostgreSQL", "CockroachDB", "NeonDB", "MongoDB", "Redis"]
+      items: ["JavaScript", "TypeScript", "Python", "Java", "SQL", "PostgreSQL", "CockroachDB", "NeonDB", "MongoDB", "Redis", "TigerGraph (GSQL)"]
     },
     {
       name: "Frameworks & Libraries",
       items: ["Next.js", "React", "Tailwind CSS", "Express.js", "Node.js", "Redux Toolkit", "Zustand"]
     },
     {
-      name: "AI & Intelligent Systems",
-      items: ["LLM Integration", "AI Agents", "Microservices"]
+      name: "GenAI & LLMs",
+      items: ["LLM Applications", "AI Agents / Agentic AI", "Model Context Protocol (MCP)", "Prompt Engineering", "RAG & GraphRAG", "LLM-as-Judge Evaluation", "Guardrails", "Anthropic API", "Google Gemini", "OpenAI", "Groq"]
+    },
+    {
+      name: "AI Frameworks",
+      items: ["LangChain", "LangGraph", "FAISS", "BM25 Hybrid Retrieval", "Sentence Transformers", "PyTorch", "OpenCV", "FastAPI", "Streamlit"]
     },
     {
       name: "AWS Cloud",
@@ -43,7 +47,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       name: "Observability & Security",
-      items: ["OpenTelemetry", "CloudWatch", "Amazon Grafana", "Casbin"]
+      items: ["OpenTelemetry", "Distributed Tracing", "CloudWatch", "Amazon Grafana", "Prometheus", "JWT", "RBAC", "Casbin", "Least-Privilege IAM"]
     },
     {
       name: "DevOps & Deployment",
@@ -98,6 +102,68 @@ export const RESUME_DATA: ResumeData = {
     }
   ],
   projects: [
+    {
+      id: "fraud-agent",
+      title: "Agentic Fraud Investigation Agent",
+      date: "2026",
+      status: "Shipped — HH Goa 2026 Task 04",
+      github: "https://github.com/Saurabhyadav0/tigergraph-fraud-agent",
+      featured: true,
+      tags: ["AI/ML", "Backend"],
+      description: "An agent that investigates fraud alerts end to end: it gathers evidence from 590K transactions, retrieves similar closed cases from a TigerGraph graph memory (GraphRAG), scores risk via a rule engine or an LLM assessor behind the same interface, and routes next-best actions under bank policy (auto / L1 / L2, with SAR rules).\n\nGraph operations are exposed as MCP tools using the official Model Context Protocol SDK, so any MCP client can reuse the agent's case-memory capabilities. A calibration test on random non-flagged transactions exposed double-counted weak signals; the fixes cut the false-positive rate from 42.5% to 2.5%.",
+      chips: ["590K Transactions", "GraphRAG + TigerGraph", "MCP Tool Server", "FP Rate 42.5% → 2.5%"],
+      stack: ["Python", "Anthropic API", "MCP SDK", "TigerGraph (GSQL)", "GraphRAG", "Streamlit"]
+    },
+    {
+      id: "voice-rag",
+      title: "Voice-Enabled Multilingual RAG",
+      date: "2026",
+      status: "Live — hh-rag-project.fly.dev",
+      github: "https://github.com/Saurabhyadav0/hh_rag_project",
+      live: "https://hh-rag-project.fly.dev",
+      featured: true,
+      tags: ["AI/ML", "Backend"],
+      description: "A Hacker House Goa 2026 team build: a multilingual, voice-enabled retrieval system with hybrid semantic + keyword retrieval (FAISS + BM25) and a provider-independent generator.\n\nInput guardrails, context-relevance validation, and a grounding check guard against hallucination, all benchmarked against a 200ms latency budget. Voice queries are transcribed through Sarvam STT for multilingual input.",
+      chips: ["Hybrid FAISS + BM25", "Input Guardrails", "Grounding Check", "200ms Budget", "Live"],
+      stack: ["Python", "FastAPI", "FAISS", "BM25", "Sarvam STT", "Fly.io"]
+    },
+    {
+      id: "support-agent-eval",
+      title: "AI Customer Support Agent with LLM Evaluation",
+      date: "2026",
+      status: "Shipped",
+      github: "https://github.com/saurabhyadav0",
+      featured: true,
+      tags: ["AI/ML", "Backend"],
+      description: "An agent that classifies customer messages into 10 intents, drafts retrieval-grounded replies, and decides auto-handle vs. human escalation — 85.6% intent accuracy vs. a 45.8% TF-IDF baseline on a 216-example golden set.\n\nBuilt an LLM-as-judge evaluation pipeline and measured it against blind human scores (kappa 0.14), documenting where rubric judges miss tone and context. Backed by 31 unit tests and a 17-entry decision log.",
+      chips: ["10-Intent Classifier", "85.6% Accuracy", "LLM-as-Judge Eval", "31 Unit Tests"],
+      stack: ["Python", "Google Gemini", "Sentence Transformers", "pytest"]
+    },
+    {
+      id: "amrutam-backend",
+      title: "Amrutam Telemedicine Backend",
+      date: "2026",
+      status: "Shipped",
+      github: "https://github.com/Saurabhyadav0/amrutam-telemedicine-backend",
+      featured: true,
+      tags: ["Backend", "Production"],
+      description: "A production-grade backend for Amrutam's Ayurvedic teleconsultation platform — identity & RBAC, doctor availability and saga-based booking, consultations, prescriptions, payments, audit and analytics.\n\nBuilt on async FastAPI + SQLAlchemy over PostgreSQL 16 and Redis 7, with an outbox worker for async jobs (delivery, hold expiry, refunds, analytics rollups). Full observability — OpenTelemetry traces, Prometheus metrics with 17 alert rules, Grafana, Loki, and Jaeger — plus 110 tests at 94% coverage, k6 load tests, and Terraform IaC for AWS (ECS Fargate, RDS Multi-AZ, ElastiCache, ALB + WAF, KMS, Secrets Manager). DPDP-compliant.",
+      chips: ["Async FastAPI", "Booking Saga", "110 Tests · 94% Coverage", "OpenTelemetry + Grafana", "Terraform IaC"],
+      stack: ["Python 3.12", "FastAPI", "PostgreSQL 16", "Redis 7", "SQLAlchemy (async)", "Alembic", "OpenTelemetry", "Prometheus", "Grafana", "Docker", "Terraform", "GitHub Actions"]
+    },
+    {
+      id: "hh-goa-2026",
+      title: "Hacker House Goa 2026 — Build Showcase",
+      date: "2026",
+      status: "Live — hacker-house-goa-task-4.vercel.app",
+      github: "https://github.com/Saurabhyadav0/hacker-house-goa-task-4",
+      live: "https://hacker-house-goa-task-4.vercel.app",
+      featured: true,
+      tags: ["Frontend", "Full-Stack"],
+      description: "A Next.js showcase site for all four Hacker House Goa 2026 task builds — Frame in Goa, Voice RAG, Face → Chain, and the final TigerGraph Fraud Agent — alongside more deployed projects.\n\nEach card carries a live screenshot and links to its repo and live site; a dedicated page walks through the fraud agent's pipeline, headline stats, and all 20 investigated cases from the agent's real output.",
+      chips: ["4 Task Builds", "HH Goa 2026", "Live Screenshots", "Live"],
+      stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
+    },
     {
       id: "saarthi-task-engine",
       title: "Saarthi TaskEngine — Task Automation Platform",
@@ -338,6 +404,11 @@ export const RESUME_DATA: ResumeData = {
       icon: "🎓",
       title: "Head Student Placement Coordinator",
       description: "Training & Placement Cell, UIET MDU (Sept 2024 – Present). Coordinate placement drives and Sportech events — managing registrations, logistics, and company coordination."
+    },
+    {
+      icon: "🏝️",
+      title: "Hacker House Goa 2026",
+      description: "Participant — shipped four task builds across the residency, from a client-side image tool to an agentic TigerGraph fraud investigator."
     },
     {
       icon: "🏆",
